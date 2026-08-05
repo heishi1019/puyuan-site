@@ -1,0 +1,31 @@
+# llms.txt — 溥源科技 / PuYuan Tech
+
+> 面向科研机构与企业的 AI-native 公司，用 agent 覆盖专业写作与政府项目申报两类高频刚需。
+
+## Company
+
+- Name: 溥源科技（PuYuan Tech）
+- Legal name: 杭州溥源智能科技有限公司
+- Website: https://www.puyuan.tech
+- Description: AI-native company building agents for research writing and government project declaration.
+
+## Products
+
+### 智小申 ProposalPilot
+- URL: https://www.puyuan.tech/proposalpilot
+- Category: Government project declaration agent
+- Target: SME owners, administrative staff, government affairs specialists
+- Description: Agent-native platform that autonomously handles government project declaration from opportunity discovery to submission follow-up. Core differentiator: evidence consistency engine that cross-checks 200+ pages of materials across 6 categories and 14 criteria.
+
+### 科小文 ScholarPilot
+- URL: https://www.puyuan.tech/scholarpilot
+- Category: Academic writing agent
+- Target: Graduate students, PhD researchers, young faculty, research institutions
+- Description: Full-lifecycle academic writing co-pilot covering topic analysis, literature review generation, draft writing, polishing, and submission preparation. (Coming soon)
+
+## Key facts (citation-ready)
+
+- 智小申 covers 6 government ministries, 3 administrative levels, 150+ project types in China.
+- Evidence consistency engine checks completeness, accuracy, and traceability across 6 categories and 14 items — a cross-document consistency check general LLMs cannot do.
+- Both cloud and private deployment options; private deployment keeps data entirely on-premise.
+- Honest capability boundary: hard-criteria projects (e.g. High-tech Enterprise certification) get definitive eligibility judgments; competitive review projects get quality improvement, no "guaranteed pass" promises.

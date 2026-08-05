@@ -1,0 +1,18 @@
+<svg width="320" height="72" viewBox="0 0 320 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="溥源科技 PUYUAN">
+  <!-- emblem: source point + ripple rings + agent satellite -->
+  <g transform="translate(36,36)">
+    <!-- outer ripple -->
+    <circle cx="0" cy="0" r="26" stroke="#00E5A0" stroke-width="1.5" stroke-opacity="0.25" fill="none"/>
+    <!-- mid ripple -->
+    <circle cx="0" cy="0" r="17" stroke="#00E5A0" stroke-width="1.75" stroke-opacity="0.55" fill="none"/>
+    <!-- inner ripple -->
+    <circle cx="0" cy="0" r="8.5" stroke="#00E5A0" stroke-width="2" fill="none"/>
+    <!-- source point -->
+    <circle cx="0" cy="0" r="3.4" fill="#00E5A0"/>
+    <!-- agent satellite node -->
+    <circle cx="18.4" cy="-18.4" r="3.2" fill="#0A0A0B" stroke="#00E5A0" stroke-width="1.75"/>
+  </g>
+  <!-- wordmark -->
+  <text x="78" y="34" font-family="'DIN Alternate','Segoe UI',system-ui,sans-serif" font-size="26" font-weight="700" letter-spacing="6" fill="#FFFFFF">溥源科技</text>
+  <text x="79" y="56" font-family="'SFMono-Regular','Consolas','Roboto Mono',monospace" font-size="12" font-weight="500" letter-spacing="5.5" fill="#00E5A0">PUYUAN&#160;TECH</text>
+</svg>
