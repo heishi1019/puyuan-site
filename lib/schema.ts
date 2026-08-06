@@ -2,7 +2,11 @@
  *  Usage: embed the return value in a <script type="application/ld+json"> tag.
  */
 
-export const SITE_URL = "https://www.puyuan.tech";
+// 部署时在 Vercel 环境变量里设置 NEXT_PUBLIC_SITE_URL（无尾部斜杠）。
+// 没设置时回退到下面的默认值；换域名只需改这里或改 Vercel 的环境变量，不用改代码。
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://puyuan-site.vercel.app"
+).replace(/\/$/, "");
 
 /** Organization schema — used on the homepage */
 export const orgSchema = {
