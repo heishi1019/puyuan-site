@@ -157,7 +157,12 @@ const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
 /* ── 6. SITE_URL is the single source of truth ──────────────────────── */
 {
   const schema = read("lib/schema.ts");
-  const m = schema.match(/export const SITE_URL\s*=\s*["']([^"']+)["']/);
+  // Accept either a plain string literal OR an env-var expression with a string fallback.
+  //   export const SITE_URL = "https://..."
+  //   export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://...").replace(...)
+  const mPlain = schema.match(/export const SITE_URL\s*=\s*["']([^"']+)["']/);
+  const mEnv   = schema.match(/NEXT_PUBLIC_SITE_URL.*?["']([^"']+)["']/);
+  const m = mPlain ?? mEnv;
   if (!m) {
     fail("SITE_URL defined in lib/schema.ts");
   } else {
@@ -165,7 +170,8 @@ const read = (rel) => readFileSync(join(ROOT, rel), "utf8");
     if (url.endsWith("/")) {
       fail("SITE_URL has no trailing slash", url);
     } else {
-      pass("SITE_URL defined", url);
+      const form = mPlain ? "literal" : "env-var";
+      pass("SITE_URL defined", `${url}  (${form})`);
     }
     // sitemap + robots must derive from it, not hardcode a domain
     for (const rel of ["app/sitemap.ts", "app/robots.ts"]) {
