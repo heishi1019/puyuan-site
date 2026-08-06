@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "溥源科技 · PuYuan Tech",
   description:
     "溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。",
+  alternates: { canonical: "/" },
 };
 
 /* ── Product matrix data ── */

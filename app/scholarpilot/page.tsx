@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "科小文 ScholarPilot Agent",
   description:
     "科小文（ScholarPilot Agent）是溥源科技面向科研人员的学术写作 agent，覆盖选题分析、文献综述、初稿撰写到润色投稿的全流程。",
+  alternates: { canonical: "/scholarpilot" },
 };
 
 const capabilities = [

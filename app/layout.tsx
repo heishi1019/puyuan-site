@@ -18,14 +18,16 @@ export const metadata: Metadata = {
   },
   description:
     "溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。",
-  alternates: {
-    canonical: "/",
-  },
+  /* NOTE: do NOT set alternates.canonical here. Next.js metadata inherits
+     downward, so a site-wide canonical makes every child page declare itself
+     a duplicate of "/" — a deindexing risk. Each page sets its own. */
   openGraph: {
     type: "website",
     locale: "zh_CN",
     siteName: "溥源科技",
-    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

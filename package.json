@@ -6,7 +6,9 @@
     "dev":   "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint":  "next lint"
+    "lint":  "next lint",
+    "verify:tokens": "node scripts/verify-tokens.mjs",
+    "check": "tsc --noEmit && next build && node scripts/verify-tokens.mjs"
   },
   "dependencies": {
     "next":    "15.3.4",
