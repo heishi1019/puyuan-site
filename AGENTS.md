@@ -22,16 +22,15 @@
 - **简称**:溥源科技 · **英文**:PuYuan Tech(字标可用 `PUYUAN`)
 - **命名含义**:「溥源」= 广博之源(知识与创造之源)。视觉/文案围绕「源点扩散 · 一源驱动多 agent」。
 - **实体命名务必全站统一**(GEO 权威信号):溥源科技 / 杭州溥源智能科技有限公司 / PuYuan Tech。
-- **定位句(⚠️ 待用户确认,见 §8-1)**:旧稿写「面向**科研人群**的 AI-native 公司」——但产品矩阵含面向**企业**的智小申,伞级定位需覆盖两者。
-  待确认提案:*面向科研机构与企业的 AI-native 公司,用 agent 覆盖专业写作与项目申报两类高频刚需。*
+- **定位句(✅ 用户 2026-08-05 确认)**:「从知识源头，驱动专业 agent」（品牌 tagline，不枚举产品，可扩展）。元数据描述层：「溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。」
 
 ### 产品矩阵(两款 agent,同源家族;**两者都要在主页矩阵中出现并各有独立页**)
 | 产品 | 英文名 | 定位 | 内容深度 | PRD 状态 |
 |---|---|---|---|---|
-| **智小申** | **ProposalPilot** | 企业政府项目申报 agent | **主推**,内容做深 | ✅ `_prd_zhishen.md`(v3.4) |
-| **科小文** | **ScholarPilot** | 学术写作 agent(选题/文献综述、初稿、润色、投稿) | **轻量占位**,不做深 | ❌ 无 PRD |
+| **智小申** | **ProposalPilot Agent** | 企业政府项目申报 agent | **主推**,内容做深 | ✅ `_prd_zhishen.md`(v3.4) |
+| **科小文** | **ScholarPilot Agent** | 学术写作 agent(选题/文献综述、初稿、润色、投稿) | **轻量占位**,不做深 | ❌ 无 PRD |
 
-> ✅ **已定**:对外品牌名统一「**智小申**」(不用「智申」);英文名 **ProposalPilot**。
+> ✅ **已定**:对外品牌名统一「**智小申**」(不用「智申」);英文名 **ProposalPilot Agent**(含 `Agent` 后缀,用户 2026-08-06 确认)。
 > ✅ **已定**:**科小文暂缓** = 不投入文案/视觉深度,但**仍出现在主页产品矩阵中且有可跳转的独立页**。
 > 其页面按占位处理:一句 slogan + 一段介绍 + 3 个能力点(取自 `BRIEF.md` 任务 2)+ 「即将上线 / 内测申请」CTA。**不要**为它编造具体数据、客户案例或功能细节——无 PRD 支撑。
 
@@ -135,6 +134,17 @@ Step 2 · Codex   再开始 → 读本文件 + _prd_zhishen.md
 
 **Codex 必须等 Step 1 完成后再动手**,否则设计令牌和共享组件尚不存在。
 
+### 交付状态(2026-08-05)
+| 产物 | 状态 |
+|---|---|
+| 共享基础层(骨架/令牌/Nav/Footer/Button/Card/`lib/schema.ts`) | ✅ 已交付 |
+| 公司主页 `/` | ✅ 已交付 |
+| 科小文占位页 `/scholarpilot` | ✅ 已交付 |
+| GEO 技术层 `app/sitemap.ts` + `app/robots.ts` | ✅ 已交付(robots 不屏蔽 AI 抓取,含 sitemap 指向) |
+| 智小申页 `/proposalpilot`(Codex) | ✅ 已交付并验收 —— 未越界改共享层;`auditTypes` 编造问题已修(见 §7.1 事实性红线) |
+
+全站 build:8 条静态路由(`/`、`/proposalpilot`、`/scholarpilot`、`/robots.txt`、`/sitemap.xml`、`/_not-found`),0 TypeScript 错误。
+
 ---
 
 ### Codex 接口契约(Claude 交付时保证,Codex 直接使用)
@@ -145,7 +155,7 @@ Step 2 · Codex   再开始 → 读本文件 + _prd_zhishen.md
 | 全局 CSS 变量 | `app/globals.css` 中 `--bg`、`--accent` 等(同 design-system.tokens.md) |
 | 共享组件 | `components/Nav.tsx`、`components/Footer.tsx`、`components/Button.tsx`、`components/Card.tsx` |
 | 页面布局 | `app/layout.tsx`(含 Nav + Footer,Codex 的页面自动套用) |
-| Schema.org 工具函数 | `lib/schema.ts` —— 导出 `orgSchema`(Organization),Codex 页面只需导出 `softwareAppSchema('ProposalPilot', ...)` |
+| Schema.org 工具函数 | `lib/schema.ts` —— 导出 `orgSchema`(Organization),Codex 页面只需导出 `softwareAppSchema('智小申 ProposalPilot Agent', ...)` |
 
 ---
 
@@ -181,11 +191,48 @@ Step 2 · Codex   再开始 → 读本文件 + _prd_zhishen.md
 | 文件 | 作用 | 权威性 |
 |---|---|---|
 | `AGENTS.md`(本文件) | 多 agent 交接 SSOT | ⭐ **先读这个,冲突时以此为准** |
-| `DESIGN.md` | 品牌契约(视觉/语气) | ⭐ 视觉与语气硬约束;但第 2 节智小申描述、第 7 节单页站点地图**已过时** |
-| `BRIEF.md` | 喂给 open-design 的分任务 prompt | ⚠️ **已过时**,未随决策更新,勿直接使用 |
-| `design-system.tokens.md` | YAML 设计令牌(已成功喂入 open-design) | ⭐ 令牌源 |
+| `DESIGN.md` | 品牌契约(视觉/语气) | ⭐ 视觉与语气硬约束。**2026-08-06 已修**:§1 定位句、§2 智小申=政府项目申报(不是国自然/课题)、§3 受众按页分层、§7 改多页 |
+| `BRIEF.md` | 喂给 open-design 的分任务 prompt | ⭐ **2026-08-06 已重写**。站点代码已落地,故其范围收窄为 logo 定稿 / favicon / OG 卡三项品牌资产,**不再包含生成官网页面**(会与现有代码冲突) |
+| `design-system.tokens.md` | YAML 设计令牌 | ⭐ 令牌源。注:其 `scale` 封顶 `3xl:64`,已按 §6「技术约定」重映射到 Tailwind 槽位 |
 | `_prd_zhishen.md` | 智小申完整 PRD v3.4 | ⭐ 产品事实源 |
 | `assets/logo-mark.svg`、`assets/logo-full.svg` | logo 手写草稿 | 仅作 open-design **输入参考**,非最终稿 |
+
+---
+
+## 7.1 技术层约定与已知陷阱(改代码前必读)
+
+### ⚠️ 陷阱一:Tailwind v4 不自动加载 `tailwind.config.ts`
+本项目用 Tailwind **v4** + `@tailwindcss/postcss`。v4 已改为 CSS-first,**不再隐式读取 JS config**。
+`app/globals.css` 顶部必须保留:
+```css
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+```
+**删掉 `@config` 那行,全部设计令牌 utility 会静默消失**(`bg-bg`/`text-accent`/`border-border`/`py-section`/`rounded-pill`/`shadow-glow` 等全部不生成),但 **build 依然成功、不报任何错** —— 页面只是靠 `globals.css` 里 `:root` 变量兜住 body 底色,看起来"有点像对的",实际全站失去令牌。
+此 bug 曾真实发生并被修复。**验证方法**(不要只看 build 是否通过):
+```bash
+grep -c 'text-accent' .next/static/css/*.css   # 必须 ≥1,为 0 即已失效
+```
+
+### 字号阶梯:令牌槽位已重映射,勿按令牌文件字面命名使用
+`design-system.tokens.md` 的 scale 封顶于 `3xl: 64`(那是 **hero 展示字号**),但代码 h1 用 `text-4xl sm:text-5xl`。若把令牌名直接对齐 class 名,会出现 **h2(64px)比 h1(36px)大**的倒挂。
+因此 `tailwind.config.ts` 已把令牌值**上移两档**落到实际使用的槽位,令牌值一个不丢:
+
+| class | 解析值 | 对应令牌 | 用途 |
+|---|---|---|---|
+| `text-lg` | 18px | (补位) | lead 段落 |
+| `text-xl` | 20px | 令牌 `lg: 20` | h3 |
+| `text-2xl` | 24px | (补位) | h3 大号 / h2 小号 |
+| `text-3xl` | 28px | 令牌 `xl: 28` | **h2 标准** |
+| `text-4xl` | 40px | 令牌 `2xl: 40` | h1 移动端 |
+| `text-5xl` | 64px | 令牌 `3xl: 64` | **h1 桌面端(hero)** |
+
+改字号前先看这张表。**h1 = `text-4xl sm:text-5xl`,h2 = `text-3xl`,h3 = `text-xl`/`text-2xl`** 为全站基线,勿单页破例。
+
+### 事实性红线(适用于所有产品页文案)
+产品页任何**看起来权威的数据面板/分类清单**,必须逐项能在 `_prd_zhishen.md` 里搜到原文,**不允许为凑数量或凑排版而改写、简化、增删分类名**。
+已发生案例:`/proposalpilot` 的证据核查 6 大类曾被写成「事实一致/数值一致/时间逻辑/主体归属/证据完整/论点支撑」,其中「时间逻辑」「主体归属」PRD 中不存在,且丢掉了真实存在的「量化表述密度」「检测机构可信度」。已按 PRD §590 修正为:
+**数值一致性 / 证据-主张映射 / 证据链闭环 / 跨维度逻辑一致性 / 量化表述密度 / 检测机构可信度**。
 
 ---
 
@@ -193,16 +240,26 @@ Step 2 · Codex   再开始 → 读本文件 + _prd_zhishen.md
 
 **已定(2026-08-05,勿再动摇)**
 - 对外品牌名统一「**智小申**」(不用「智申」)。
-- 智小申英文名 = **ProposalPilot**(与科小文 ScholarPilot 构成 `*Pilot` 家族命名)。
+- 智小申英文名 = **ProposalPilot Agent**(与科小文 **ScholarPilot Agent** 构成 `*Pilot Agent` 家族命名)。
+  - `Agent` 是**名称的一部分**,不是品类描述词 —— 出现在字标、页面标题、Schema.org `name`、Footer、产品卡。
+  - **路由不含后缀**:`/proposalpilot`、`/scholarpilot` 保持不变(URL 干净,且改动会破坏 sitemap/canonical/已有外链)。
+  - 页面标题避免叠词:写「智小申 ProposalPilot Agent · 企业政府项目申报」,**不要**写「... Agent | ... Agent」。
 - **科小文暂缓**:内容轻量占位、不做深;但**保留在主页产品矩阵并有独立页**。
 - **站点为多页结构**:公司主页 → 产品矩阵 → 两个 agent 独立页(取代原单页长滚动方案)。
 - **Agent 分工**:Claude 负责主页 `/` + 科小文占位页 + 共享基础层;Codex 负责智小申页 `/proposalpilot`。Claude 先交付共享层,Codex 再开始。
 
+**已定(追加,2026-08-05)**
+- **公司伞级定位句** = 「**从知识源头，驱动专业 agent**」。可见层(Hero/h1)只用这句,**不枚举产品**,新 agent 上线不必改动;产品枚举只放在机器可读层(`metadata.description` / `orgSchema` / `llms.txt`)。
+- 由此推出的**文案硬规则**:全站可见文案**不得锁定 agent 数量**(「两款/两个 agent」一律禁用,改「agent 家族」等不锁数量表述)。局部对比两个具名产品时用「两者」可以。
+
 **仍未决(需向用户确认,勿自行拍板)**
-1. ⚠️ **公司伞级定位句**(阻塞主页 Hero):旧稿「面向科研人群的 AI-native 公司」无法覆盖面向企业的智小申。提案见 §1。需用户确认或给新句。
-2. 智小申英文名是否带「Agent」后缀:用户原话为「ProposalPilot Agent」。当前按 **ProposalPilot** 处理(字标/Schema.org/页面标题),「Agent」视为品类描述词而非名称一部分——若理解有误请纠正。
-3. `BRIEF.md` 需按本文件重写(旧稿把科小文列在前、把智小申写成「国自然/课题申报书」、且仍是单页方案)。喂给 open-design 前必须更新。
-4. 用户此前明确表示「还有更多信息未使用、多个要求」——**可能仍有需求未给全**,动工前确认是否已齐。
+1. ✅ **英文名 `Agent` 后缀** — 已确认(2026-08-06):**带后缀**。智小申 = `ProposalPilot Agent`,科小文 = `ScholarPilot Agent`。
+   - ⚠️ 用户仅明确确认了智小申。**科小文的后缀是 Claude 按家族一致性推断的** —— 两者在 Footer 和主页产品卡里并排出现,一个带一个不带会是可见的品牌缺陷。若科小文不应带后缀,改 `app/scholarpilot/page.tsx`、`app/page.tsx`(`nameEn` + 2 条 FAQ)、`components/Footer.tsx`、`lib/schema.ts`、`public/llms.txt`。
+2. ✅ **已完成(2026-08-06)**:`BRIEF.md` 已按本文件重写。旧稿三处错误(科小文排在前、智小申写成「国自然/课题申报书」、单页方案)已全部修正。**且重新定界了范围**——站点页面已用代码落地,不再需要 open-design 出页面原型;`BRIEF.md` 现在只覆盖**代码无法产出的视觉资产**(logo 定稿 / favicon / OG 卡)。
+   > ⚠️ 其中一项需用户决策:**logo 卫星节点数量**。现草稿只有 1 个卫星,但品牌故事是「一源驱动**多** agent」、tagline 也已改为可扩展写法,单节点与之矛盾。见 `BRIEF.md` 任务 1。
+3. 用户此前明确表示「还有更多信息未使用、多个要求」——**可能仍有需求未给全**,动工前确认是否已齐。
+4. 未部署:尚未接 Vercel,`SITE_URL` = `https://www.puyuan.tech` 为预设域名,域名若变需同步改 `lib/schema.ts`(sitemap/robots/schema 全部取自该常量)。
+5. 缺 favicon 与 OG 图:`app/layout.tsx` 的 `openGraph` 目前无 `images`,分享卡片无预览图。
 
 ---
 

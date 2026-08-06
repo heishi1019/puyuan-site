@@ -3,9 +3,9 @@ import { softwareAppSchema, faqSchema, SITE_URL } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "科小文 ScholarPilot",
+  title: "科小文 ScholarPilot Agent",
   description:
-    "科小文（ScholarPilot）是溥源科技面向科研人员的学术写作 agent，覆盖选题分析、文献综述、初稿撰写到润色投稿的全流程。",
+    "科小文（ScholarPilot Agent）是溥源科技面向科研人员的学术写作 agent，覆盖选题分析、文献综述、初稿撰写到润色投稿的全流程。",
 };
 
 const capabilities = [
@@ -25,7 +25,7 @@ const capabilities = [
 
 const faqs = [
   {
-    question: "科小文（ScholarPilot）是什么？",
+    question: "科小文（ScholarPilot Agent）是什么？",
     answer:
       "科小文是溥源科技（PuYuan Tech）开发的学术写作 agent，覆盖科研写作从选题到投稿的全流程：选题分析、文献综述生成、初稿撰写、润色与投稿格式适配。面向研究生、博士、青年教师及科研机构。",
   },
@@ -39,7 +39,7 @@ const faqs = [
 export default function ScholarPilotPage() {
   const jsonLd = [
     softwareAppSchema(
-      "科小文 ScholarPilot",
+      "科小文 ScholarPilot Agent",
       "溥源科技面向科研人员的学术写作 agent，覆盖选题、文献综述、初稿撰写到润色投稿全流程。",
       `${SITE_URL}/scholarpilot`,
     ),
@@ -67,7 +67,7 @@ export default function ScholarPilotPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-text">
             科小文<br />
-            <span className="text-accent font-mono text-2xl">ScholarPilot</span>
+            <span className="text-accent font-mono text-2xl">ScholarPilot Agent</span>
           </h1>
           <p className="text-lg text-muted leading-relaxed">
             从选题到投稿，全流程学术写作副驾驶。

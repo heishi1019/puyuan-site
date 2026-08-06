@@ -7,15 +7,15 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "溥源科技 · PuYuan Tech",
   description:
-    "面向科研机构与企业的 AI-native 公司，用 agent 覆盖专业写作与政府项目申报两类高频刚需。",
+    "溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。",
 };
 
 /* ── Product matrix data ── */
 const products = [
   {
     name: "智小申",
-    nameEn: "ProposalPilot",
-    tag: "政府项目申报 Agent",
+    nameEn: "ProposalPilot Agent",
+    tag: "政府项目申报",
     desc: "自主完成「发现机会 → 诊断资格 → 编制材料 → 质检定稿 → 申报提醒」，让中小企业拥有大企业级政府事务能力。",
     capabilities: [
       "政策全量匹配 · 资格诊断 · ROI 前置",
@@ -28,8 +28,8 @@ const products = [
   },
   {
     name: "科小文",
-    nameEn: "ScholarPilot",
-    tag: "学术写作 Agent",
+    nameEn: "ScholarPilot Agent",
+    tag: "学术写作",
     desc: "覆盖选题、文献综述、初稿撰写到润色投稿的全流程，让科研写作从繁琐变流畅。",
     capabilities: [
       "选题分析 · 文献综述自动生成",
@@ -71,12 +71,12 @@ const faqs = [
   {
     question: "溥源科技是做什么的？",
     answer:
-      "溥源科技（PuYuan Tech）是一家面向科研机构与企业的 AI-native 公司，旗下两款 agent 产品：智小申（ProposalPilot）覆盖政府项目申报全流程，科小文（ScholarPilot）覆盖学术写作全流程。",
+      "溥源科技（PuYuan Tech）是一家 AI-native 公司，为专业高频场景构建 agent。当前产品包括智小申（ProposalPilot Agent），覆盖政府项目申报全流程；科小文（ScholarPilot Agent），覆盖学术写作全流程。产品线持续扩展。",
   },
   {
     question: "智小申和科小文是同一个产品吗？",
     answer:
-      "不是。智小申（ProposalPilot）面向企业，帮助完成高企认定、研发费加计、专项资金等政府项目申报；科小文（ScholarPilot）面向科研人员，覆盖论文选题到投稿的全流程学术写作支持。两者共享溥源科技底层能力，但场景、受众和功能各自独立。",
+      "不是。智小申（ProposalPilot Agent）面向企业，帮助完成高企认定、研发费加计、专项资金等政府项目申报；科小文（ScholarPilot Agent）面向科研人员，覆盖论文选题到投稿的全流程学术写作支持。两者共享溥源科技底层能力，但场景、受众和功能各自独立。",
   },
   {
     question: "溥源的 agent 支持私有化部署吗？",
@@ -120,14 +120,13 @@ export default function HomePage() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.15] text-text">
-            从知识的源头<br />
-            <span className="text-accent">驱动专业写作与申报</span>
+            从知识源头<br />
+            <span className="text-accent">驱动专业 agent</span>
           </h1>
 
           {/* Sub */}
           <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            溥源科技用 agent 覆盖科研写作与政府项目申报两类高频刚需——
-            全流程、可溯源、数据安全可私有化。
+            AI-native 公司，用 agent 覆盖专业高频场景——全流程自主执行，可溯源，数据安全可私有化。
           </p>
 
           {/* CTAs */}
@@ -148,7 +147,7 @@ export default function HomePage() {
           <p className="font-mono text-xs text-muted uppercase tracking-widest">
             Product Matrix
           </p>
-          <h2 className="text-3xl font-semibold text-text">两款 Agent，同源驱动</h2>
+          <h2 className="text-3xl font-semibold text-text">Agent 家族，同源驱动</h2>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">

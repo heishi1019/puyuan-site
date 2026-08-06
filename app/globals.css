@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* Tailwind v4 no longer auto-loads a JS config — this directive is required
+   or every design token in tailwind.config.ts silently produces no utilities. */
+@config "../tailwind.config.ts";
 
 /* ─── Design tokens (mirrors tailwind.config.ts) ─── */
 :root {

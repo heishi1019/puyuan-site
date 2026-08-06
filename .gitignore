@@ -16,3 +16,8 @@ Thumbs.db
 # Env
 .env*
 !.env.example
+
+# 内部资料 — 不进仓库（含定价策略、护城河、竞品分析、roadmap）
+# 注意：_prd_zhishen.md 已存在于首个提交 db896cc 的历史中，
+# 本条只能阻止后续再次提交，无法清除历史。清除需 rewrite（见 DEPLOY.md）。
+_prd_*.md

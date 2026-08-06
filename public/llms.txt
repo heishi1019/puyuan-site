@@ -1,23 +1,23 @@
 # llms.txt — 溥源科技 / PuYuan Tech
 
-> 面向科研机构与企业的 AI-native 公司，用 agent 覆盖专业写作与政府项目申报两类高频刚需。
+> 从知识源头，驱动专业 agent。AI-native 公司，构建专业场景 agent，持续扩展。
 
 ## Company
 
 - Name: 溥源科技（PuYuan Tech）
 - Legal name: 杭州溥源智能科技有限公司
 - Website: https://www.puyuan.tech
-- Description: AI-native company building agents for research writing and government project declaration.
+- Description: AI-native company building professional-domain agents. Current products: ProposalPilot Agent (government project declaration) and ScholarPilot Agent (academic writing). Expanding.
 
 ## Products
 
-### 智小申 ProposalPilot
+### 智小申 ProposalPilot Agent
 - URL: https://www.puyuan.tech/proposalpilot
 - Category: Government project declaration agent
 - Target: SME owners, administrative staff, government affairs specialists
 - Description: Agent-native platform that autonomously handles government project declaration from opportunity discovery to submission follow-up. Core differentiator: evidence consistency engine that cross-checks 200+ pages of materials across 6 categories and 14 criteria.
 
-### 科小文 ScholarPilot
+### 科小文 ScholarPilot Agent
 - URL: https://www.puyuan.tech/scholarpilot
 - Category: Academic writing agent
 - Target: Graduate students, PhD researchers, young faculty, research institutions

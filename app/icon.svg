@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- favicon 版:比 logo-mark 更粗的描边 + 更高不透明度,保证 16px 下可辨识 -->
+  <rect width="32" height="32" rx="7" fill="#0A0A0B"/>
+  <!-- 涟漪环(只保留 2 环,3 环在小尺寸下会糊成一团) -->
+  <circle cx="16" cy="16" r="10.5" stroke="#00E5A0" stroke-width="1.6" opacity="0.45"/>
+  <circle cx="16" cy="16" r="6.5" stroke="#00E5A0" stroke-width="1.8" opacity="0.8"/>
+  <!-- 源点 → 卫星节点 连接线 -->
+  <line x1="16" y1="16" x2="24" y2="8" stroke="#00E5A0" stroke-width="1.6" opacity="0.6"/>
+  <!-- 源点 -->
+  <circle cx="16" cy="16" r="3.1" fill="#00E5A0"/>
+  <!-- 卫星节点 -->
+  <circle cx="24" cy="8" r="2.5" fill="#00E5A0"/>
+</svg>

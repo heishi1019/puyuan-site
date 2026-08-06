@@ -17,11 +17,15 @@ export const metadata: Metadata = {
     template: "%s · 溥源科技",
   },
   description:
-    "面向科研机构与企业的 AI-native 公司，用 agent 覆盖专业写作与政府项目申报两类高频刚需。",
+    "溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "zh_CN",
     siteName: "溥源科技",
+    url: "/",
   },
 };
 

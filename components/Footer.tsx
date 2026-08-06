@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const PRODUCT_LINKS = [
-  { label: "智小申 ProposalPilot", href: "/proposalpilot" },
-  { label: "科小文 ScholarPilot",  href: "/scholarpilot"  },
+  { label: "智小申 ProposalPilot Agent", href: "/proposalpilot" },
+  { label: "科小文 ScholarPilot Agent",  href: "/scholarpilot"  },
 ];
 
 export default function Footer() {

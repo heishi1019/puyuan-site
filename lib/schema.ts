@@ -13,12 +13,12 @@ export const orgSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo-mark.svg`,
   description:
-    "面向科研机构与企业的 AI-native 公司，用 agent 覆盖专业写作与政府项目申报两类高频刚需。",
+    "杭州溥源智能科技有限公司（溥源科技 / PuYuan Tech），AI-native 公司，旗下智小申（ProposalPilot Agent）覆盖政府项目申报全流程，科小文（ScholarPilot Agent）覆盖学术写作全流程，持续扩展中。",
   sameAs: [],
 };
 
 /** SoftwareApplication schema — used on each product page.
- *  @param name        Product name, e.g. "智小申 ProposalPilot"
+ *  @param name        Product name, e.g. "智小申 ProposalPilot Agent"
  *  @param description One-sentence GEO-friendly description
  *  @param url         Canonical product page URL
  */
