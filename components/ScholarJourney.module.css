@@ -1,0 +1,43 @@
+.journeySection,.handoffSection,.audienceSection { padding: 112px 24px; border-bottom: 1px solid #292929; color: #f5f5f2; background: #0d0d0d; }
+.sectionIntro { width: min(100%,1152px); margin: 0 auto; text-align: center; }.sectionIntro > p,.eyebrow,.stageLabel,.stageMeta { color: #979797; font: 10px "Geist Mono",monospace; letter-spacing: .12em; text-transform: uppercase; }.sectionIntro h2 { margin-top: 16px; font-size: 48px; font-weight: 630; line-height: 1.14; }.sectionIntro > span { display: block; max-width: 580px; margin: 20px auto 0; color: #989894; font-size: 16px; line-height: 1.8; }
+.journeyLayout { display: grid; grid-template-columns: minmax(330px,.94fr) minmax(430px,1.06fr); gap: clamp(48px,6vw,88px); width: min(100%,1152px); margin: 80px auto 0; }.stageList { padding-bottom: 96px; border-top: 1px solid #383836; }.stage { display: flex; align-items: center; min-height: 52vh; border-bottom: 1px solid #383836; opacity: .42; transition: opacity 360ms ease,transform 500ms cubic-bezier(.16,1,.3,1); }.stage[data-active="true"] { opacity: 1; transform: translateX(12px); }.stage button { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 18px; width: 100%; padding: 28px 0; text-align: left; }.stage button:focus-visible { outline: 2px solid #d7ff00; outline-offset: 8px; }.stageIcon { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid #595955; border-radius: 8px; color: #a8a8a2; background: #161616; transition: color 300ms ease,background-color 300ms ease,border-color 300ms ease,transform 400ms cubic-bezier(.16,1,.3,1); }.stage[data-active="true"] .stageIcon { border-color: #d7ff00; color: #0d0d0d; background: #d7ff00; transform: rotate(-3deg); }.stageCopy { display: block; }.stageCopy strong { display: block; margin-top: 16px; color: #f5f5f2; font-size: clamp(22px,1.55vw,24px); font-weight: 620; line-height: 1.25; text-wrap: balance; }.stageDescription { display: block; max-width: 35ch; margin-top: 13px; color: #989894; font-size: 14px; line-height: 1.75; }.stageMeta { display: block; margin-top: 20px; color: #787874; }
+.manuscriptSticky { position: relative; }.manuscriptFrame { position: sticky; top: 116px; height: min(580px,calc(100dvh - 210px)); min-height: 470px; overflow: hidden; border: 1px solid #45453f; border-radius: 2px; background: #171715; background-image: linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size: 28px 28px; box-shadow: 0 28px 72px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.1); }.frameHeader,.frameFooter { position: absolute; left: 22px; right: 22px; z-index: 4; display: flex; justify-content: space-between; color: #777772; font: 9px "Geist Mono",monospace; letter-spacing: .08em; }.frameHeader { top: 18px; }.frameFooter { bottom: 18px; }.frameFooter i { width: 7px; height: 7px; border-radius: 50%; background: #d7ff00; box-shadow: 0 0 0 7px rgba(215,255,0,.1); animation: pulse 2.2s ease-in-out infinite; }.paperStack { position: absolute; inset: 70px 46px 58px; }.paperBack,.paperMiddle,.paper { position: absolute; inset: 0; border: 1px solid #51514a; border-radius: 2px; background: #f5f5f2; }.paperBack { opacity: .48; transform: rotate(-4deg) translate(-12px,4px); }.paperMiddle { opacity: .72; transform: rotate(3deg) translate(10px,2px); }.paper { overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.26); }.paperMargin { position: absolute; top: 0; bottom: 0; left: 54px; width: 1px; background: #d5d5cf; }.documentState { position: absolute; inset: 0; padding: clamp(32px,4.8vh,46px) clamp(30px,4vw,48px) 30px clamp(68px,7vw,88px); opacity: 0; transform: translateY(24px) scale(.985); pointer-events: none; transition: opacity 460ms ease,transform 620ms cubic-bezier(.16,1,.3,1); }.documentState[data-visible="true"] { opacity: 1; transform: none; }.documentState > span { color: #66705b; font: 10px "Geist Mono",monospace; letter-spacing: .08em; }.documentState h3 { margin-top: 20px; color: #151515; font-size: clamp(24px,2.2vw,31px); font-weight: 630; line-height: 1.25; }.keywordRow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }.keywordRow b { padding: 7px 10px; border: 1px solid #b8bd8a; border-radius: 2px; color: #555a36; background: #f0f4cf; font-size: 11px; }.citationList { margin-top: 20px; }.citationList p { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid #deded7; color: #65655f; font-size: 12px; line-height: 1.5; }.citationList p b { color: #6a7520; font: 10px "Geist Mono",monospace; }.outlineList { margin-top: 22px; list-style: none; }.outlineList li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid #deded7; color: #41413d; }.outlineList li b { color: #6a7520; font: 10px "Geist Mono",monospace; }.typingCursor { display: block; width: 2px; height: 18px; margin: 18px 0 0 42px; background: #d7ff00; animation: cursor 1s steps(2,end) infinite; }.revisionBlock { margin-top: 20px; }.revisionBlock p { display: grid; grid-template-columns: 58px 1fr; align-items: center; padding: 10px 0; border-top: 1px solid #deded7; color: #65655f; font-size: 12px; }.revisionBlock p b { width: max-content; padding: 4px 7px; border-radius: 2px; color: #505a1b; background: #eff5b8; font: 9px "Geist Mono",monospace; }.confirmation { display: flex; align-items: center; gap: 8px; margin-top: 18px; color: #69751b; font-size: 12px; }
+@keyframes pulse { 50% { opacity: .55; transform: scale(.82); } } @keyframes cursor { 50% { opacity: 0; } }
+@media (max-width: 900px) { .journeySection { padding-block: 88px; }.journeyLayout { grid-template-columns: 1fr; gap: 44px; margin-top: 64px; }.stageList { display: grid; gap: 16px; padding-bottom: 0; border-top: 0; }.stage { min-height: 0; padding: 0; border: 1px solid #383836; border-radius: 2px; background: #141413; opacity: 1; }.stage[data-active="true"] { border-color: #d7ff00; transform: none; }.stage button { padding: 22px; }.manuscriptSticky { order: -1; }.manuscriptSticky > div { transform: none !important; }.manuscriptFrame { position: relative; top: auto; height: 590px; min-height: 0; } }
+@media (max-width: 640px) { .journeySection { padding: 72px 20px; }.sectionIntro h2 { font-size: 36px; }.sectionIntro h2 br { display: none; }.journeyLayout { margin-top: 48px; }.manuscriptFrame { height: 510px; }.paperStack { inset: 64px 22px 54px; }.paperBack { transform: rotate(-2deg) translate(-4px,2px); }.paperMiddle { transform: rotate(2deg) translate(4px,1px); }.paperMargin { left: 34px; }.documentState { padding: 38px 22px 30px 54px; }.documentState h3 { font-size: 24px; }.stage button { grid-template-columns: 42px minmax(0,1fr); gap: 16px; padding: 20px; }.stageIcon { width: 42px; height: 42px; }.stageCopy strong { font-size: 21px; } }
+@media (prefers-reduced-motion: reduce) { .stage,.stageIcon,.documentState { transition: none; }.frameFooter i,.typingCursor { animation: none; } }
+
+@media (min-width: 901px) {
+  .journeyLayout { align-items: start; }
+  .manuscriptSticky {
+    position: relative;
+    align-self: stretch;
+    min-height: 220vh;
+  }
+  .manuscriptFrame {
+    position: relative;
+    top: auto;
+  }
+  .paperStack { inset: 38px 46px 58px; }
+}
+
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .paperStack { perspective: 1400px; transform: rotateX(var(--manuscript-tilt-x,0deg)) rotateY(var(--manuscript-tilt-y,0deg)); transform-style: preserve-3d; transition: transform 260ms cubic-bezier(.16,1,.3,1); }
+  .paperBack,
+  .paperMiddle { backface-visibility: hidden; transform-style: preserve-3d; will-change: transform; }
+  .paperBack { animation: manuscript-back-float 5.2s cubic-bezier(.42,0,.2,1) infinite alternate; }
+  .paperMiddle { animation: manuscript-middle-float 4.4s cubic-bezier(.42,0,.2,1) infinite alternate; }
+  .manuscriptFrame:hover .paperStack { transition-duration: 90ms; }
+  .manuscriptFrame:hover .paperBack { animation-duration: 2.8s; }
+  .manuscriptFrame:hover .paperMiddle { animation-duration: 2.4s; }
+}
+
+@keyframes manuscript-back-float {
+  from { transform: rotate(-5deg) rotateY(-11deg) translate3d(-17px,7px,-44px); }
+  to { transform: rotate(-1.5deg) rotateY(-2deg) translate3d(-25px,-7px,-16px); }
+}
+
+@keyframes manuscript-middle-float {
+  from { transform: rotate(4deg) rotateY(9deg) translate3d(13px,4px,-26px); }
+  to { transform: rotate(1deg) rotateY(1deg) translate3d(20px,-7px,-4px); }
+}

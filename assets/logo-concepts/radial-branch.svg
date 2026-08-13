@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan radial branch mark concept</title>
+  <desc id="desc">A central source branching asymmetrically to three endpoints.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <g fill="none" stroke="#00E5A0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M360 268C330 235 296 192 248 150"/>
+    <path d="M360 268C394 230 434 194 492 180"/>
+    <path d="M360 268C405 290 454 326 512 374"/>
+  </g>
+  <g fill="#00E5A0">
+    <circle cx="360" cy="268" r="30"/>
+    <circle cx="238" cy="142" r="15"/><circle cx="505" cy="176" r="15"/><circle cx="525" cy="386" r="15"/>
+  </g>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">PUYUAN</text>
+</svg>

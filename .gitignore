@@ -1,5 +1,6 @@
 # Next.js
 .next/
+.next-dev/
 out/
 
 # Dependencies
@@ -8,6 +9,7 @@ node_modules/
 # Build artifacts
 *.tsbuildinfo
 next-env.d.ts
+.next-build-cache/
 
 # OS
 .DS_Store
@@ -16,6 +18,19 @@ Thumbs.db
 # Env
 .env*
 !.env.example
+
+# Local browser/test/runtime output
+.tmp-*
+.tmp-*/
+tmp/
+output/
+video-frames/
+edge-*/
+qa-*.png
+debug.log
+scripts/__pycache__/
+.codex-link-digest-output/
+backups/
 
 # 内部资料 — 不进仓库（含定价策略、护城河、竞品分析、roadmap）
 # 注意：_prd_zhishen.md 已存在于首个提交 db896cc 的历史中，

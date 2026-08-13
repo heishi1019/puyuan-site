@@ -1,31 +1,36 @@
-# llms.txt — 溥源科技 / PuYuan Tech
+# llms.txt - 溥源智能 / Pryos AI
 
-> 从知识源头，驱动专业 agent。AI-native 公司，构建专业场景 agent，持续扩展。
+> 让智能体，走进真实的专业世界。AI Agents for the Professional World.
 
 ## Company
 
-- Name: 溥源科技（PuYuan Tech）
+- Public brand: 溥源智能（Pryos AI）
 - Legal name: 杭州溥源智能科技有限公司
-- Website: https://www.puyuan.tech
-- Description: AI-native company building professional-domain agents. Current products: ProposalPilot Agent (government project declaration) and ScholarPilot Agent (academic writing). Expanding.
+- Website: https://pryos.cn
+- Description: 溥源智能专注专业智能体产品研发与产品化，从科研与企业项目申报切入，让智能体在明确责任边界内参与真实工作。
 
 ## Products
 
-### 智小申 ProposalPilot Agent
-- URL: https://www.puyuan.tech/proposalpilot
-- Category: Government project declaration agent
-- Target: SME owners, administrative staff, government affairs specialists
-- Description: Agent-native platform that autonomously handles government project declaration from opportunity discovery to submission follow-up. Core differentiator: evidence consistency engine that cross-checks 200+ pages of materials across 6 categories and 14 criteria.
-
 ### 科小文 ScholarPilot Agent
-- URL: https://www.puyuan.tech/scholarpilot
-- Category: Academic writing agent
-- Target: Graduate students, PhD researchers, young faculty, research institutions
-- Description: Full-lifecycle academic writing co-pilot covering topic analysis, literature review generation, draft writing, polishing, and submission preparation. (Coming soon)
 
-## Key facts (citation-ready)
+- URL: https://scholar.pryos.cn
+- Status: 免费内测中，已有可演示原型
+- Category: 面向中国科研人员的 AI 科研工作台
+- Demonstrable capabilities: 选题、研究设计与文献综述；文献阅读、证据整理与引用；论文写作与修改
+- In development: 投稿、返修与审稿回复；中文数据库检索策略；国内科研流程适配；本地优先工作方式
+- Planned: 数据分析与可复现代码；科研项目与基金申请；临床研究及专业学科任务；200 余项科研技能体系；自带 API
+- Boundary: 不替代研究真实性、学术判断、署名、投稿决定和最终成果责任，不承诺论文发表或项目获批。
 
-- 智小申 covers 6 government ministries, 3 administrative levels, 150+ project types in China.
-- Evidence consistency engine checks completeness, accuracy, and traceability across 6 categories and 14 items — a cross-document consistency check general LLMs cannot do.
-- Both cloud and private deployment options; private deployment keeps data entirely on-premise.
-- Honest capability boundary: hard-criteria projects (e.g. High-tech Enterprise certification) get definitive eligibility judgments; competitive review projects get quality improvement, no "guaranteed pass" promises.
+### 智小申 ProposalPilot Agent
+
+- URL: https://project.pryos.cn
+- Status: 研发与共创阶段，尚无公开原型
+- Category: 面向中国企业项目申报场景的专业智能体方向
+- Planned workflow: 项目与政策发现；资格初步检查；指南解读；材料与任务规划；文本辅助起草；指标一致性检查；节点提醒；项目资产沉淀
+- Boundary: 政策和资格以官方渠道为准；不补造企业事实；关键决定和最终提交由企业或专业服务人员确认；不预测或承诺项目获批、资金金额与评审结果。
+
+## Citation-ready facts
+
+- 科小文是当前旗舰产品，处于免费内测阶段并已有可演示原型。
+- 智小申处于研发与共创阶段，官网中的工作链属于产品规划，不代表功能已经开放。
+- 溥源智能明确区分内测可演示、持续建设和规划方向，不把未来能力写成当前承诺。

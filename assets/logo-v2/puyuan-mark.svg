@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360" viewBox="0 0 160 180" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">溥源智能主标</title>
+  <desc id="desc">上扬源流轮廓、荧光黄水滴、双涟漪与数字节点</desc>
+  <g stroke="#F5F5F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 108V68C25 55 31 45 42 38L76 14V43L55 57C48 62 45 69 45 78V102"/>
+    <path d="M85 14L119 38C130 45 136 55 136 68V106C122 101 111 99 102 101C94 103 87 108 80 113"/>
+  </g>
+  <path d="M80 48C76 66 62 78 62 94C62 106 70 115 80 115C90 115 98 106 98 94C98 78 84 66 80 48Z" fill="#D7FF00"/>
+  <g fill="#F5F5F2">
+    <rect x="127" y="37" width="9" height="9" rx="1.5"/>
+    <rect x="139" y="48" width="7" height="7" rx="1.2" opacity=".84"/>
+    <rect x="132" y="59" width="6" height="6" rx="1" opacity=".68"/>
+    <rect x="145" y="65" width="4" height="4" rx=".8" opacity=".52"/>
+  </g>
+  <g fill="none" stroke="#F5F5F2" stroke-linecap="round">
+    <path d="M26 119C46 108 65 109 80 118C98 129 116 128 136 116" stroke-width="8"/>
+    <path d="M15 141C40 126 64 127 82 138C104 151 128 149 147 136" stroke-width="7"/>
+  </g>
+</svg>

@@ -1,260 +1,104 @@
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import { orgSchema, faqSchema } from "@/lib/schema";
 import type { Metadata } from "next";
-import Link from "next/link";
+import HomeProductJump from "@/components/HomeProductJump";
+import HomePageCoverMotion from "@/components/HomePageCoverMotion";
+import HomeFaq, { HOME_FAQS } from "@/components/HomeFaq";
+import HomeSourceNetwork from "@/components/HomeSourceNetwork";
+import HomeWorkflow from "@/components/HomeWorkflow";
+import ProductMatrix from "@/components/ProductMatrix";
+import { ArrowUpRight, Compass, FlowArrow, UsersThree } from "@phosphor-icons/react/dist/ssr";
+import { faqSchema, orgSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "溥源科技 · PuYuan Tech",
-  description:
-    "溥源科技（PuYuan Tech）是一家 AI-native 公司，专注构建专业场景 agent，持续扩展中。",
+  title: "溥源智能 · Pryos AI",
+  description: "溥源智能（Pryos AI）专注专业智能体产品研发与产品化，让智能体走进真实的专业世界。",
   alternates: { canonical: "/" },
 };
 
-/* ── Product matrix data ── */
-const products = [
-  {
-    name: "智小申",
-    nameEn: "ProposalPilot Agent",
-    tag: "政府项目申报",
-    desc: "自主完成「发现机会 → 诊断资格 → 编制材料 → 质检定稿 → 申报提醒」，让中小企业拥有大企业级政府事务能力。",
-    capabilities: [
-      "政策全量匹配 · 资格诊断 · ROI 前置",
-      "证据核查引擎：跨 200 页材料核查一致性",
-      "私有化部署 / 云端加密，数据不出内网",
-    ],
-    href: "/proposalpilot",
-    ctaLabel: "了解智小申 →",
-    badge: null,
-  },
-  {
-    name: "科小文",
-    nameEn: "ScholarPilot Agent",
-    tag: "学术写作",
-    desc: "覆盖选题、文献综述、初稿撰写到润色投稿的全流程，让科研写作从繁琐变流畅。",
-    capabilities: [
-      "选题分析 · 文献综述自动生成",
-      "初稿结构化撰写与多轮润色",
-      "投稿格式适配 · 期刊风格指引",
-    ],
-    href: "/scholarpilot",
-    ctaLabel: "了解科小文 →",
-    badge: "即将上线",
-  },
-];
-
-/* ── Why PuYuan pillars ── */
-const pillars = [
-  {
-    icon: "◎",
-    title: "懂专业场景",
-    desc: "深度理解政府申报与学术写作的流程、规则与评审逻辑，不只是通用文本生成。",
-  },
-  {
-    icon: "⟳",
-    title: "全流程而非工具箱",
-    desc: "从信息收集到最终交付，agent 贯穿全链路，人只需在关键节点决策。",
-  },
-  {
-    icon: "◫",
-    title: "数据安全可私有化",
-    desc: "支持私有化部署，数据不出内网；云端版签约承诺不保存、不训练。",
-  },
-  {
-    icon: "✓",
-    title: "诚实的能力边界",
-    desc: "明确告知 agent 能做什么、不能做什么，不承诺「包过」，给你真实可用的结果。",
-  },
-];
-
-/* ── FAQ data ── */
-const faqs = [
-  {
-    question: "溥源科技是做什么的？",
-    answer:
-      "溥源科技（PuYuan Tech）是一家 AI-native 公司，为专业高频场景构建 agent。当前产品包括智小申（ProposalPilot Agent），覆盖政府项目申报全流程；科小文（ScholarPilot Agent），覆盖学术写作全流程。产品线持续扩展。",
-  },
-  {
-    question: "智小申和科小文是同一个产品吗？",
-    answer:
-      "不是。智小申（ProposalPilot Agent）面向企业，帮助完成高企认定、研发费加计、专项资金等政府项目申报；科小文（ScholarPilot Agent）面向科研人员，覆盖论文选题到投稿的全流程学术写作支持。两者共享溥源科技底层能力，但场景、受众和功能各自独立。",
-  },
-  {
-    question: "溥源的 agent 支持私有化部署吗？",
-    answer:
-      "支持。智小申提供私有化部署方案，数据完全不出内网，适合对数据安全有高要求的机构和企业。云端版签约承诺不保存用户材料、不用于模型训练，并全程加密传输。",
-  },
-];
-
-/* ──────────────────────────────────────────────────────────── */
-
 export default function HomePage() {
-  const jsonLd = [orgSchema, faqSchema(faqs)];
-
   return (
-    <>
-      {/* JSON-LD */}
-      {jsonLd.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
+    <div className="home-blue home-phase-one">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema([...HOME_FAQS])) }} />
+      <HomePageCoverMotion />
 
-      {/* ── Hero ── */}
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden px-6">
-        {/* Subtle radial glow behind content */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 flex items-center justify-center"
-        >
-          <div className="h-[600px] w-[600px] rounded-full bg-accent/5 blur-3xl" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-3xl text-center space-y-8">
-          {/* Label */}
-          <span className="inline-flex items-center gap-2 rounded-pill border border-border bg-surface px-4 py-1.5 font-mono text-xs text-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-            AI-native · 专业场景 agent
-          </span>
-
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[1.15] text-text">
-            从知识源头<br />
-            <span className="text-accent">驱动专业 agent</span>
+      <section className="phase-one-hero" data-page-theme="light">
+        <div className="phase-one-hero__copy">
+          <h1>
+            让智能体，走进真实的{" "}
+            <span className="phase-one-hero__agent" aria-label="专业世界">
+              <span aria-hidden="true">专</span>
+              <span aria-hidden="true">业</span>
+              <span aria-hidden="true">世</span>
+              <span aria-hidden="true">界</span>
+            </span>
           </h1>
+          <p>溥源智能专注专业智能体产品研发与产品化，从科研与企业项目申报切入，让 AI 在明确边界内参与真实工作。</p>
+          <HomeProductJump />
+        </div>
+        <HomeSourceNetwork />
+      </section>
 
-          {/* Sub */}
-          <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            AI-native 公司，用 agent 覆盖专业高频场景——全流程自主执行，可溯源，数据安全可私有化。
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button href="https://app.puyuan.tech" size="lg">
-              免费试用
-            </Button>
-            <Button href="/proposalpilot" variant="secondary" size="lg">
-              预约 Demo
-            </Button>
+      <section id="company" className="home-company-subject" aria-labelledby="home-company-title">
+        <div className="home-company-subject__shell">
+          <div className="home-company-subject__intro">
+            <p className="home-company-subject__kicker">溥源科技是谁</p>
+            <h2 id="home-company-title">一家把 AI agent 带进真实工作流程的公司。</h2>
           </div>
-        </div>
-      </section>
-
-      {/* ── Product Matrix ── */}
-      <section id="products" className="mx-auto max-w-6xl px-6 py-section">
-        <div className="mb-12 text-center space-y-2">
-          <p className="font-mono text-xs text-muted uppercase tracking-widest">
-            Product Matrix
-          </p>
-          <h2 className="text-3xl font-semibold text-text">Agent 家族，同源驱动</h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-6">
-          {products.map((p) => (
-            <Card key={p.name} glowOnHover className="flex flex-col justify-between gap-6">
-              <div className="space-y-4">
-                {/* Name row */}
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="text-xl font-semibold text-text">
-                      {p.name}
-                    </h3>
-                    <p className="font-mono text-sm text-accent">{p.nameEn}</p>
-                  </div>
-                  <div className="flex flex-col items-end gap-1.5">
-                    <span className="inline-block rounded-pill border border-border px-3 py-0.5 font-mono text-xs text-muted">
-                      {p.tag}
-                    </span>
-                    {p.badge && (
-                      <span className="inline-block rounded-pill bg-surface border border-accent/30 px-3 py-0.5 font-mono text-xs text-accent">
-                        {p.badge}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <p className="text-muted text-sm leading-relaxed">{p.desc}</p>
-
-                {/* Capabilities */}
-                <ul className="space-y-2">
-                  {p.capabilities.map((cap) => (
-                    <li key={cap} className="flex items-start gap-2 text-sm text-muted">
-                      <span className="mt-0.5 text-accent select-none">·</span>
-                      {cap}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* CTA */}
-              <Link
-                href={p.href}
-                className="self-start text-sm font-medium text-accent hover:text-accent-hover transition-colors"
-              >
-                {p.ctaLabel}
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* ── Why PuYuan ── */}
-      <section className="border-t border-border py-section px-6">
-        <div className="mx-auto max-w-6xl space-y-12">
-          <div className="text-center space-y-2">
-            <p className="font-mono text-xs text-muted uppercase tracking-widest">
-              Why PuYuan
+          <div className="home-company-subject__copy">
+            <p>
+              杭州溥源智能科技有限公司（PuYuan Tech）从真实工作场景和用户痛点出发，构建能够理解任务、组织资料、推进流程并协助交付的专业 agent。
             </p>
-            <h2 className="text-3xl font-semibold text-text">为什么选溥源</h2>
+            <p>
+              我们将大语言模型、专业知识、智能工作流和工具执行能力组织成产品，让 AI 不只回答问题，也能在清晰的责任边界内参与一项真实工作。
+            </p>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pillars.map((p) => (
-              <div key={p.title} className="space-y-3">
-                <span className="font-mono text-2xl text-accent">{p.icon}</span>
-                <h3 className="font-semibold text-text">{p.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
+        </div>
+        <div
+          id="about"
+          className="home-company-subject__capabilities phase-one-capabilities"
+          data-page-theme="dark"
+        >
+          <div className="phase-one-capabilities__inner">
+            <div className="phase-one-capabilities__heading">
+              <h2>把专业知识组织成可推进的工作</h2>
+              <p>围绕高信息量、多步骤、专业门槛高的任务，agent 连接资料、规则与协作关系，并把关键判断留给人。</p>
+            </div>
+            <div className="phase-one-capabilities__grid">
+              <article>
+                <Compass size={28} weight="light" aria-hidden="true" />
+                <h3>理解专业工作</h3>
+                <p>从真实工作场景和用户痛点出发，减少流程适配、反复沟通和重新整理信息的成本。</p>
+              </article>
+              <article>
+                <FlowArrow size={28} weight="light" aria-hidden="true" />
+                <h3>贯穿完整流程</h3>
+                <p>把专业知识、智能工作流和工具执行组织起来，持续参与发现、判断、执行与交付。</p>
+              </article>
+              <article>
+                <UsersThree size={28} weight="light" aria-hidden="true" />
+                <h3>人保留关键决策</h3>
+                <p>agent 负责检索、整理、比对和初步编制，人负责审核、定稿和最终决策。</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── FAQ ── */}
-      <section className="border-t border-border py-section px-6">
-        <div className="mx-auto max-w-3xl space-y-8">
-          <div className="text-center space-y-2">
-            <p className="font-mono text-xs text-muted uppercase tracking-widest">FAQ</p>
-            <h2 className="text-2xl font-semibold text-text">常见问题</h2>
-          </div>
+      <HomeWorkflow />
 
-          <dl className="space-y-6">
-            {faqs.map(({ question, answer }) => (
-              <div key={question} className="border-b border-border pb-6 last:border-0 last:pb-0">
-                <dt className="font-medium text-text mb-2">{question}</dt>
-                <dd className="text-sm text-muted leading-relaxed">{answer}</dd>
-              </div>
-            ))}
-          </dl>
+      <ProductMatrix />
+
+      <HomeFaq />
+
+      <section className="phase-two-contact home-color-page home-color-page--cover" data-page-theme="dark">
+        <div className="phase-two-contact__inner" data-cover-content>
+          <h2>联系溥源智能，开始专业协作</h2>
+          <p>告诉我们你正在推进的专业任务。</p>
+          <a href="mailto:hello@puyuan.tech">
+            hello@puyuan.tech <ArrowUpRight size={30} weight="light" aria-hidden="true" />
+          </a>
         </div>
       </section>
-
-      {/* ── Bottom CTA ── */}
-      <section className="border-t border-border py-section px-6 text-center space-y-6">
-        <h2 className="text-2xl font-semibold text-text">
-          准备好让 agent 接管繁琐流程了吗？
-        </h2>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <Button href="https://app.puyuan.tech" size="lg">
-            免费开始使用
-          </Button>
-          <Button href="mailto:hello@puyuan.tech" variant="secondary" size="lg">
-            联系我们
-          </Button>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

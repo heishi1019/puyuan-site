@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan refined source propagation</title>
+  <desc id="desc">A source point releasing three controlled arcs into agent nodes.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <g fill="none" stroke="#00E5A0" stroke-width="15" stroke-linecap="round">
+    <path d="M330 226A48 48 0 0 1 330 294"/>
+    <path d="M370 194A92 92 0 0 1 370 326"/>
+    <path d="M410 166A132 132 0 0 1 410 354"/>
+  </g>
+  <g fill="#00E5A0">
+    <circle cx="286" cy="260" r="24"/>
+    <circle cx="330" cy="226" r="8"/>
+    <circle cx="370" cy="194" r="8"/>
+    <circle cx="410" cy="166" r="8"/>
+  </g>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">PUYUAN</text>
+</svg>

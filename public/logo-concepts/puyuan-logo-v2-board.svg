@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">溥源智能 Logo V2 应用效果板</title>
+  <desc id="desc">主标、导航横版、favicon 与黑白反色应用</desc>
+  <rect width="1600" height="1000" fill="#0A0A0A"/>
+  <g stroke="#292927" stroke-width="1"><path d="M70 88H1530M70 902H1530M800 88V902"/><path d="M70 510H1530" stroke-dasharray="4 12"/></g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="70" y="56" fill="#F5F5F2" font-size="14" letter-spacing="4">PUYUAN / IDENTITY V2</text>
+    <text x="1530" y="56" fill="#D7FF00" text-anchor="end" font-size="14" letter-spacing="4">SOURCE · FLOW · AGENT</text>
+  </g>
+  <g transform="translate(510 120) scale(2.25)">
+    <g stroke="#F5F5F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M25 108V68C25 55 31 45 42 38L76 14V43L55 57C48 62 45 69 45 78V102"/><path d="M85 14L119 38C130 45 136 55 136 68V106C122 101 111 99 102 101C94 103 87 108 80 113"/></g>
+    <path d="M80 48C76 66 62 78 62 94C62 106 70 115 80 115C90 115 98 106 98 94C98 78 84 66 80 48Z" fill="#D7FF00"/>
+    <g fill="#F5F5F2"><rect x="127" y="37" width="9" height="9" rx="1.5"/><rect x="139" y="48" width="7" height="7" rx="1.2" opacity=".84"/><rect x="132" y="59" width="6" height="6" rx="1" opacity=".68"/><rect x="145" y="65" width="4" height="4" rx=".8" opacity=".52"/></g>
+    <g fill="none" stroke="#F5F5F2" stroke-linecap="round"><path d="M26 119C46 108 65 109 80 118C98 129 116 128 136 116" stroke-width="8"/><path d="M15 141C40 126 64 127 82 138C104 151 128 149 147 136" stroke-width="7"/></g>
+  </g>
+  <g text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="800" y="520" fill="#F5F5F2" font-size="76" font-weight="700" letter-spacing="5">溥源智能</text>
+    <text x="800" y="566" fill="#A5A59F" font-size="18" letter-spacing="9">PRYOS AI</text>
+  </g>
+  <g transform="translate(90 650)">
+    <rect width="650" height="122" rx="18" fill="#121212" stroke="#333330"/>
+    <g transform="translate(24 22) scale(.43)">
+      <g stroke="#F5F5F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M25 108V68C25 55 31 45 42 38L76 14V43L55 57C48 62 45 69 45 78V102"/><path d="M85 14L119 38C130 45 136 55 136 68V106C122 101 111 99 102 101C94 103 87 108 80 113"/></g><path d="M80 48C76 66 62 78 62 94C62 106 70 115 80 115C90 115 98 106 98 94C98 78 84 66 80 48Z" fill="#D7FF00"/><path d="M22 128C45 114 66 115 81 124C100 135 121 133 140 120" stroke="#F5F5F2" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <text x="130" y="62" fill="#F5F5F2" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">PRYOS AI</text>
+    <text x="132" y="86" fill="#A5A59F" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="12" letter-spacing="3">溥源智能 · 深色导航横版</text>
+  </g>
+  <g transform="translate(850 650)">
+    <rect width="220" height="220" rx="44" fill="#D7FF00"/>
+    <g transform="translate(37 34) scale(1.45)"><g stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 45V27C13 22 15 18 19 15L30 7V19L23 24C20 26 19 29 19 33V42"/><path d="M34 7L45 15C49 18 51 22 51 27V44C46 42 42 42 39 43C36 44 34 46 32 48"/></g><path d="M32 22C30.5 28 26 32.5 26 38C26 42.5 28.8 46 32 46C35.2 46 38 42.5 38 38C38 32.5 33.5 28 32 22Z" fill="#0A0A0A"/></g>
+    <text x="110" y="250" fill="#F5F5F2" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" letter-spacing="3">ACCENT ICON</text>
+  </g>
+  <g transform="translate(1160 650)">
+    <rect width="220" height="220" rx="44" fill="#F5F5F2"/>
+    <g transform="translate(37 34) scale(1.45)"><g stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 45V27C13 22 15 18 19 15L30 7V19L23 24C20 26 19 29 19 33V42"/><path d="M34 7L45 15C49 18 51 22 51 27V44C46 42 42 42 39 43C36 44 34 46 32 48"/></g><path d="M32 22C30.5 28 26 32.5 26 38C26 42.5 28.8 46 32 46C35.2 46 38 42.5 38 38C38 32.5 33.5 28 32 22Z" fill="#D7FF00"/></g>
+    <text x="110" y="250" fill="#F5F5F2" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" letter-spacing="3">LIGHT ICON</text>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14">
+    <text x="70" y="944" fill="#F5F5F2">保留：上扬轮廓 / 中心水滴 / 双涟漪 / 四个数字节点</text>
+    <text x="1530" y="944" fill="#8F8F89" text-anchor="end">简化：单一线宽体系 / 无渐变 / 无内部 S 形切割 / favicon 独立减法</text>
+  </g>
+</svg>

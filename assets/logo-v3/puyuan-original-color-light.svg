@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 210 210" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">溥源智能原始标志浅色版</title>
+  <desc id="desc">保留原始结构的浅色背景配色</desc>
+  <rect width="210" height="210" rx="28" fill="#F5F5F2"/>
+  <g stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 116V68C72 56 78 47 89 40L105 29V63C91 71 86 80 86 92V116" stroke-width="10"/>
+    <path d="M105 29L121 40C132 47 138 56 138 68V113C127 108 117 108 105 115" stroke-width="10"/>
+    <path d="M105 58C101 75 90 84 90 98C90 109 96 116 105 116C114 116 120 109 120 98C120 84 109 75 105 58Z" fill="#D7FF00" stroke-width="4"/>
+    <path d="M68 124C82 116 96 117 106 123C117 130 131 130 145 122M57 143C75 132 94 132 106 140C121 149 139 148 153 138" stroke-width="7"/>
+  </g>
+  <g fill="#0A0A0A"><rect x="143" y="45" width="8" height="8" rx="1"/><rect x="155" y="56" width="6" height="6" rx="1" opacity=".78"/><rect x="148" y="67" width="5" height="5" rx="1" opacity=".58"/><rect x="160" y="73" width="4" height="4" rx="1" opacity=".4"/></g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" fill="none" role="img" aria-labelledby="title">
+  <title id="title">溥源智能原始 Logo 配色方案</title>
+  <rect width="1400" height="820" fill="#0A0A0A"/>
+  <path d="M60 80H1340M60 740H1340M700 80V740" stroke="#292927"/>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="60" y="48" fill="#F5F5F2" font-size="14" letter-spacing="4">ORIGINAL FORM / COLOR STUDY</text>
+    <text x="1340" y="48" fill="#D7FF00" text-anchor="end" font-size="14" letter-spacing="3">KEEP THE ORIGINAL SILHOUETTE</text>
+  </g>
+  <g transform="translate(470 118) scale(2.1)">
+    <g stroke="#F5F5F2" stroke-linecap="round" stroke-linejoin="round"><path d="M72 116V68C72 56 78 47 89 40L105 29V63C91 71 86 80 86 92V116" stroke-width="10"/><path d="M105 29L121 40C132 47 138 56 138 68V113C127 108 117 108 105 115" stroke-width="10"/><path d="M105 58C101 75 90 84 90 98C90 109 96 116 105 116C114 116 120 109 120 98C120 84 109 75 105 58Z" fill="#D7FF00" stroke-width="4"/><path d="M68 124C82 116 96 117 106 123C117 130 131 130 145 122M57 143C75 132 94 132 106 140C121 149 139 148 153 138" stroke-width="7"/></g>
+    <g fill="#D7FF00"><rect x="143" y="45" width="8" height="8" rx="1"/><rect x="155" y="56" width="6" height="6" rx="1" opacity=".78"/><rect x="148" y="67" width="5" height="5" rx="1" opacity=".58"/><rect x="160" y="73" width="4" height="4" rx="1" opacity=".4"/></g>
+  </g>
+  <text x="700" y="598" fill="#F5F5F2" text-anchor="middle" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="58" font-weight="700" letter-spacing="5">溥源智能</text>
+  <text x="700" y="638" fill="#A5A59F" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" letter-spacing="8">PRYOS AI</text>
+  <g transform="translate(850 690)"><rect width="170" height="80" fill="#F5F5F2"/><text x="20" y="28" fill="#0A0A0A" font-family="Arial, sans-serif" font-size="11" letter-spacing="2">PALETTE</text><circle cx="30" cy="55" r="8" fill="#D7FF00"/><circle cx="68" cy="55" r="8" fill="#F5F5F2" stroke="#0A0A0A"/><circle cx="106" cy="55" r="8" fill="#0A0A0A"/></g>
+  <text x="60" y="775" fill="#8F8F89" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="14">本版仅改变配色：保留原始水滴、流线、涟漪与数字节点结构</text>
+</svg>

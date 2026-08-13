@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan A1 ordered nodes refinement</title>
+  <desc id="desc">A compact open source ring with progressively sized agent nodes.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <path d="M412 183A92 92 0 1 0 412 337" fill="none" stroke="#00E5A0" stroke-width="16" stroke-linecap="round"/>
+  <g fill="#00E5A0">
+    <circle cx="360" cy="260" r="22"/>
+    <circle cx="438" cy="190" r="7"/>
+    <circle cx="466" cy="260" r="9"/>
+    <circle cx="438" cy="330" r="11"/>
+  </g>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">PUYUAN</text>
+</svg>

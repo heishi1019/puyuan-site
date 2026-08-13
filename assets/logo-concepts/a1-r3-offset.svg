@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan A1 offset source refinement</title>
+  <desc id="desc">An open ring with an offset source and three orbital nodes.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <path d="M415 181A94 94 0 1 0 415 339" fill="none" stroke="#00E5A0" stroke-width="16" stroke-linecap="round"/>
+  <g fill="#00E5A0">
+    <circle cx="345" cy="270" r="22"/>
+    <circle cx="441" cy="191" r="8"/>
+    <circle cx="471" cy="254" r="10"/>
+    <circle cx="445" cy="327" r="8"/>
+  </g>
+  <path d="M365 262C390 250 414 249 451 253" fill="none" stroke="#00E5A0" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">PUYUAN</text>
+</svg>

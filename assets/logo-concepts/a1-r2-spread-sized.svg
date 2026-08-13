@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan A1 R2 spread nodes with varied sizes</title>
+  <desc id="desc">A layered open source ring with three widely distributed agent nodes in subtly different sizes.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <g fill="none" stroke="#00E5A0" stroke-linecap="round">
+    <path d="M411 183A92 92 0 1 0 411 337" stroke-width="16"/>
+    <path d="M432 208A62 62 0 0 1 432 312" stroke-width="10"/>
+  </g>
+  <g fill="#00E5A0">
+    <circle cx="356" cy="260" r="22"/>
+    <circle cx="458" cy="187" r="7"/>
+    <circle cx="486" cy="260" r="11"/>
+    <circle cx="458" cy="333" r="9"/>
+  </g>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">PUYUAN</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan modular wave mark concept</title>
+  <desc id="desc">Continuous modular line segments organizing a source into a system.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <path d="M220 270h54l28-72 48 138 40-102 32 72h78" fill="none" stroke="#00E5A0" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="350" cy="270" r="12" fill="#00E5A0"/>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">PUYUAN</text>
+</svg>

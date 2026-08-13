@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="80" viewBox="0 0 360 80" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">溥源智能导航横版标志</title>
+  <desc id="desc">简化源流标志与 PRYOS AI 字标</desc>
+  <g transform="translate(4 3) scale(.42)">
+    <g stroke="#F5F5F2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25 108V68C25 55 31 45 42 38L76 14V43L55 57C48 62 45 69 45 78V102"/>
+      <path d="M85 14L119 38C130 45 136 55 136 68V106C122 101 111 99 102 101C94 103 87 108 80 113"/>
+    </g>
+    <path d="M80 48C76 66 62 78 62 94C62 106 70 115 80 115C90 115 98 106 98 94C98 78 84 66 80 48Z" fill="#D7FF00"/>
+    <g fill="#F5F5F2"><rect x="127" y="37" width="9" height="9" rx="1.5"/><rect x="139" y="48" width="7" height="7" rx="1.2" opacity=".8"/><rect x="132" y="59" width="6" height="6" rx="1" opacity=".6"/><rect x="145" y="65" width="4" height="4" rx=".8" opacity=".45"/></g>
+    <path d="M22 128C45 114 66 115 81 124C100 135 121 133 140 120" stroke="#F5F5F2" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="92" y="45" fill="#F5F5F2" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="25" font-weight="700" letter-spacing="5">PRYOS AI</text>
+  <text x="94" y="63" fill="#A8A8A2" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="10" letter-spacing="3">溥源智能</text>
+</svg>

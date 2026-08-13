@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">溥源智能原始标志简化效果图</title>
+  <desc id="desc">保留原稿的上扬外轮廓、水滴、涟漪与数字节点，适配黑白荧光黄官网</desc>
+  <rect width="1600" height="1000" fill="#F5F5F2"/>
+  <g stroke="#D0D0CA" stroke-width="1">
+    <path d="M72 86H1528M72 914H1528M72 86V914M1528 86V914"/>
+    <path d="M800 86V914M72 500H1528" stroke-dasharray="4 12"/>
+  </g>
+  <g fill="#0A0A0A" font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="72" y="55" font-size="15" letter-spacing="3">PUYUAN / LOGO REFINEMENT</text>
+    <text x="1528" y="55" text-anchor="end" font-size="15" letter-spacing="3">SOURCE · FLOW · INTELLIGENCE</text>
+  </g>
+  <g transform="translate(800 406)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Original outer upward silhouette, reduced to one clear contour. -->
+    <path d="M-182 108V-63Q-180-92-151-112L0-217L145-119Q181-94 181-56V104" stroke="#0A0A0A" stroke-width="24"/>
+    <!-- Original central droplet, reduced to a single solid source. -->
+    <path d="M0-120C-8-73-58-37-58 10C-58 51-31 78 0 78C31 78 58 51 58 10C58-37 8-73 0-120Z" fill="#D7FF00" stroke="#0A0A0A" stroke-width="10"/>
+    <!-- Original water-ripple idea, reduced to two deliberate flow strokes. -->
+    <path d="M-184 116C-114 75-43 77 0 104C49 135 115 135 190 92" stroke="#0A0A0A" stroke-width="18"/>
+    <path d="M-220 164C-128 118-51 120 4 152C65 187 151 184 226 137" stroke="#0A0A0A" stroke-width="18"/>
+    <!-- Original digital cluster, simplified to four ordered nodes. -->
+    <g fill="#0A0A0A" stroke="none">
+      <rect x="157" y="-132" width="22" height="22" rx="2"/>
+      <rect x="190" y="-99" width="18" height="18" rx="2"/>
+      <rect x="219" y="-70" width="14" height="14" rx="2"/>
+      <rect x="188" y="-54" width="14" height="14" rx="2"/>
+    </g>
+  </g>
+  <g text-anchor="middle" fill="#0A0A0A" font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="800" y="690" font-size="78" font-weight="700" letter-spacing="4">溥源智能</text>
+    <text x="800" y="738" font-size="19" letter-spacing="8">PRYOS AI</text>
+  </g>
+  <g transform="translate(102 774)">
+    <rect width="314" height="108" fill="#0A0A0A"/>
+    <g transform="translate(57 53) scale(.2)" fill="none" stroke="#F5F5F2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-182 108V-63Q-180-92-151-112L0-217L145-119Q181-94 181-56V104" stroke-width="24"/>
+      <path d="M0-120C-8-73-58-37-58 10C-58 51-31 78 0 78C31 78 58 51 58 10C58-37 8-73 0-120Z" fill="#D7FF00" stroke="#F5F5F2" stroke-width="10"/>
+      <path d="M-184 116C-114 75-43 77 0 104C49 135 115 135 190 92M-220 164C-128 118-51 120 4 152C65 187 151 184 226 137" stroke-width="18"/>
+      <g fill="#F5F5F2" stroke="none"><rect x="157" y="-132" width="22" height="22"/><rect x="190" y="-99" width="18" height="18"/><rect x="219" y="-70" width="14" height="14"/><rect x="188" y="-54" width="14" height="14"/></g>
+    </g>
+    <text x="118" y="49" fill="#F5F5F2" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="3">PRYOS AI</text>
+    <text x="118" y="73" fill="#B2B2AC" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" letter-spacing="2">官网深色导航应用</text>
+  </g>
+  <g transform="translate(1185 774)">
+    <rect width="108" height="108" rx="18" fill="#0A0A0A"/>
+    <g transform="translate(54 56) scale(.14)" fill="none" stroke="#F5F5F2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-182 108V-63Q-180-92-151-112L0-217L145-119Q181-94 181-56V104" stroke-width="24"/>
+      <path d="M0-120C-8-73-58-37-58 10C-58 51-31 78 0 78C31 78 58 51 58 10C58-37 8-73 0-120Z" fill="#D7FF00" stroke="#F5F5F2" stroke-width="10"/>
+      <path d="M-184 116C-114 75-43 77 0 104C49 135 115 135 190 92M-220 164C-128 118-51 120 4 152C65 187 151 184 226 137" stroke-width="18"/>
+      <g fill="#F5F5F2" stroke="none"><rect x="157" y="-132" width="22" height="22"/><rect x="190" y="-99" width="18" height="18"/><rect x="219" y="-70" width="14" height="14"/><rect x="188" y="-54" width="14" height="14"/></g>
+    </g>
+    <text x="54" y="136" text-anchor="middle" fill="#0A0A0A" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="13" letter-spacing="2">APP ICON</text>
+  </g>
+  <g fill="#0A0A0A" font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="72" y="950" font-size="15">保留：上扬外轮廓 / 中心水滴 / 双涟漪 / 数字节点</text>
+    <text x="1528" y="950" text-anchor="end" font-size="15">简化：去除渐变、内部分割、额外波纹与拟物阴影</text>
+  </g>
+</svg>

@@ -1,132 +1,62 @@
-import Button from "@/components/Button";
-import { softwareAppSchema, faqSchema, SITE_URL } from "@/lib/schema";
 import type { Metadata } from "next";
+import ProductHero from "@/components/ProductHero";
+import ScholarJourney from "@/components/ScholarJourney";
+import ScholarEarlyAccess from "@/components/ScholarEarlyAccess";
+import FaqAccordion from "@/components/FaqAccordion";
+import ScholarPageCoverMotion from "@/components/ScholarPageCoverMotion";
+import ScholarUseCaseCards from "@/components/ScholarUseCaseCards";
+import { faqSchema, softwareAppSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "科小文 ScholarPilot Agent",
-  description:
-    "科小文（ScholarPilot Agent）是溥源科技面向科研人员的学术写作 agent，覆盖选题分析、文献综述、初稿撰写到润色投稿的全流程。",
-  alternates: { canonical: "/scholarpilot" },
+  title: "科小文 ScholarPilot Agent · AI 科研工作台",
+  description: "科小文（ScholarPilot Agent）是 Pryos AI 面向中国科研人员打造的 AI 科研工作台，目前处于免费内测阶段并已有可演示原型。",
+  alternates: { canonical: "https://scholar.pryos.cn" },
 };
 
-const capabilities = [
-  {
-    title: "选题 & 文献综述",
-    desc: "输入研究方向，自动检索相关文献并生成结构化综述，一份可直接引用的段落。",
-  },
-  {
-    title: "初稿结构化撰写",
-    desc: "按目标期刊风格组织章节框架，逐段生成初稿，全程逻辑可追溯。",
-  },
-  {
-    title: "润色 & 投稿准备",
-    desc: "针对语言规范、逻辑连贯性、摘要质量做多轮润色，并适配投稿格式要求。",
-  },
+const demonstrableCapabilities = [
+  { number: "01", title: "选题、研究设计与文献综述", text: "围绕研究方向整理问题边界、研究路径与文献脉络，形成可以继续检查和修改的研究框架。" },
+  { number: "02", title: "文献阅读、证据整理与引用", text: "围绕研究问题组织检索策略、阅读记录、证据摘录与引用关系，保留回到来源核对的路径。" },
+  { number: "03", title: "论文写作与修改", text: "根据研究者确认的材料组织章节与草稿，支持持续修改；观点、事实与最终结论仍由研究者负责。" },
 ];
 
+const buildingCapabilities = ["投稿、返修与审稿回复", "中文数据库检索策略", "国内科研流程适配", "本地优先工作方式"];
+const plannedCapabilities = ["数据分析与可复现代码", "科研项目与基金申请", "临床研究及专业学科任务", "200 余项科研技能体系", "自带 API"];
+
 const faqs = [
-  {
-    question: "科小文（ScholarPilot Agent）是什么？",
-    answer:
-      "科小文是溥源科技（PuYuan Tech）开发的学术写作 agent，覆盖科研写作从选题到投稿的全流程：选题分析、文献综述生成、初稿撰写、润色与投稿格式适配。面向研究生、博士、青年教师及科研机构。",
-  },
-  {
-    question: "科小文什么时候上线？",
-    answer:
-      "科小文目前正在内测阶段，计划近期公测。欢迎通过页面内按钮申请内测资格，我们会按序邀请。",
-  },
+  { question: "科小文 ScholarPilot Agent 是什么？", answer: "科小文是 Pryos AI 面向中国科研人员打造的 AI 科研工作台。它以科研项目为单位组织文献、文件、证据、写作过程与任务记录，目前处于免费内测阶段并已有可演示原型。" },
+  { question: "现在可以直接下载使用吗？", answer: "目前采用内测申请与审核机制。个人研究者可以申请免费内测，实验室、课题组和科研机构可以联系团队沟通试用与合作。" },
+  { question: "科小文会替代研究者写论文或保证发表吗？", answer: "不会。科小文协助处理信息、组织流程和形成可修改草稿；研究真实性、学术判断、署名、投稿决定与最终成果责任始终由研究者承担，也不承诺论文发表或项目获批。" },
+  { question: "文献来源和引用可以核对吗？", answer: "内测方向是保留文献来源、证据摘录、引用位置和研究笔记之间的关联，让内容能够回到来源核对。引用准确性仍需研究者在最终稿中确认。" },
+  { question: "数据会默认上传到云端吗？", answer: "产品采用本地优先的工作方式，不默认上传完整科研项目。调用云端模型或外部工具时的数据路径，以实际版本提示和隐私说明为准。" },
+  { question: "目前哪些能力已经可以演示？", answer: "当前可演示选题、研究设计与文献综述，文献阅读、证据整理与引用，以及论文写作与修改。投稿返修、中文数据库策略等能力仍在持续建设，数据分析、基金申请等属于规划方向。" },
 ];
 
 export default function ScholarPilotPage() {
-  const jsonLd = [
-    softwareAppSchema(
-      "科小文 ScholarPilot Agent",
-      "溥源科技面向科研人员的学术写作 agent，覆盖选题、文献综述、初稿撰写到润色投稿全流程。",
-      `${SITE_URL}/scholarpilot`,
-    ),
-    faqSchema(faqs),
-  ];
+  const jsonLd = [softwareAppSchema("科小文 ScholarPilot Agent", "Pryos AI 面向中国科研人员打造的 AI 科研工作台，目前处于免费内测阶段。", "https://scholar.pryos.cn"), faqSchema(faqs)];
+  return <div className="scholar-page scholar-rebase">
+    {jsonLd.map((schema, index) => <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />)}
+    <ScholarPageCoverMotion />
 
-  return (
-    <>
-      {jsonLd.map((schema, i) => (
-        <script
-          key={i}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
+    <ProductHero product="scholar" />
 
-      {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center px-6 overflow-hidden">
-        <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="h-[500px] w-[500px] rounded-full bg-accent/5 blur-3xl" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-2xl text-center space-y-6">
-          <span className="inline-block rounded-pill border border-accent/30 bg-surface px-4 py-1.5 font-mono text-xs text-accent">
-            即将上线 · 内测申请中
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-text">
-            科小文<br />
-            <span className="text-accent font-mono text-2xl">ScholarPilot Agent</span>
-          </h1>
-          <p className="text-lg text-muted leading-relaxed">
-            从选题到投稿，全流程学术写作副驾驶。
-            帮你把 30 篇文献读成一段可引用的综述，
-            把研究思路转化成完整初稿。
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button href="mailto:hello@puyuan.tech?subject=ScholarPilot内测申请" size="lg">
-              申请内测资格
-            </Button>
-            <Button href="/" variant="secondary" size="lg">
-              ← 返回首页
-            </Button>
-          </div>
-        </div>
-      </section>
+    <div className="scholar-cover scholar-cover--ink" data-scholar-theme="dark"><ScholarJourney /></div>
 
-      {/* Capabilities */}
-      <section className="border-t border-border py-section px-6">
-        <div className="mx-auto max-w-5xl space-y-12">
-          <div className="text-center space-y-2">
-            <p className="font-mono text-xs text-muted uppercase tracking-widest">Capabilities</p>
-            <h2 className="text-2xl font-semibold text-text">三大核心能力</h2>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {capabilities.map((c, i) => (
-              <div key={c.title} className="space-y-3 p-6 rounded-lg border border-border bg-surface">
-                <span className="font-mono text-accent text-lg">0{i + 1}</span>
-                <h3 className="font-semibold text-text">{c.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <section id="capabilities" className="scholar-cover scholar-capabilities scroll-mt-24" data-scholar-theme="light">
+      <div className="scholar-section-shell" data-scholar-cover-content>
+        <header className="scholar-section-heading"><h2>把研究过程<br />留在同一个项目里</h2><span>从研究问题到论文修改，已可演示的能力围绕真实项目持续组织资料、证据与写作过程。</span></header>
+        <div className="scholar-capability-grid">{demonstrableCapabilities.map(({ number, title, text }) => <article key={number}><small>内测可演示</small><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </div>
+    </section>
 
-      {/* FAQ */}
-      <section className="border-t border-border py-section px-6">
-        <div className="mx-auto max-w-3xl space-y-8">
-          <h2 className="text-2xl font-semibold text-center text-text">常见问题</h2>
-          <dl className="space-y-6">
-            {faqs.map(({ question, answer }) => (
-              <div key={question} className="border-b border-border pb-6 last:border-0 last:pb-0">
-                <dt className="font-medium text-text mb-2">{question}</dt>
-                <dd className="text-sm text-muted leading-relaxed">{answer}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+    <section id="roadmap" className="scholar-cover scholar-roadmap scroll-mt-24" data-scholar-theme="dark">
+      <div className="scholar-section-shell" data-scholar-cover-content>
+        <header className="scholar-section-heading"><h2>完整的科研工作，分阶段走近</h2><span>产品会持续扩展，但每一项能力都以当前真实开放范围为准，不把规划写成承诺。</span></header>
+        <div className="scholar-roadmap-grid"><article><div><span className="scholar-roadmap__status">持续建设</span><h3>正在连接更长的研究链</h3><span>实际范围随内测版本说明</span></div><ul>{buildingCapabilities.map((capability) => <li key={capability}>{capability}</li>)}</ul></article><article><div><span className="scholar-roadmap__status">规划方向</span><h3>面向未来的专业任务</h3><span>不构成当前功能承诺</span></div><ul>{plannedCapabilities.map((capability) => <li key={capability}>{capability}</li>)}</ul></article></div>
+        <ScholarUseCaseCards />
+      </div>
+    </section>
 
-      {/* CTA */}
-      <section className="border-t border-border py-section px-6 text-center space-y-6">
-        <p className="text-muted">第一时间获得内测资格</p>
-        <Button href="mailto:hello@puyuan.tech?subject=ScholarPilot内测申请" size="lg">
-          申请内测
-        </Button>
-      </section>
-    </>
-  );
+    <section className="scholar-cover scholar-faq" data-scholar-theme="light"><div className="scholar-section-shell" data-scholar-cover-content><header className="scholar-section-heading"><h2>科小文常见问题</h2></header><FaqAccordion items={faqs} /></div></section>
+    <div className="scholar-cover scholar-cover--closing" data-scholar-theme="dark"><ScholarEarlyAccess /></div>
+  </div>;
 }

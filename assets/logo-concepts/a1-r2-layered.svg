@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+  <title id="title">PuYuan A1 layered arcs refinement</title>
+  <desc id="desc">An open source ring with a secondary arc and two agent nodes.</desc>
+  <rect width="720" height="520" fill="#0A0A0B"/>
+  <g fill="none" stroke="#00E5A0" stroke-linecap="round">
+    <path d="M411 183A92 92 0 1 0 411 337" stroke-width="16"/>
+    <path d="M434 207A62 62 0 0 1 434 313" stroke-width="10"/>
+  </g>
+  <g fill="#00E5A0">
+    <circle cx="356" cy="260" r="22"/>
+    <circle cx="455" cy="205" r="8"/>
+    <circle cx="472" cy="260" r="10"/>
+    <circle cx="455" cy="315" r="8"/>
+  </g>
+  <text x="360" y="440" fill="#F5F5F7" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="7">PUYUAN</text>
+</svg>

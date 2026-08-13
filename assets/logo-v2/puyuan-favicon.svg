@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-label="溥源智能图标">
+  <rect width="64" height="64" rx="13" fill="#0A0A0A"/>
+  <g stroke="#F5F5F2" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 45V27C13 22 15 18 19 15L30 7V19L23 24C20 26 19 29 19 33V42"/>
+    <path d="M34 7L45 15C49 18 51 22 51 27V44C46 42 42 42 39 43C36 44 34 46 32 48"/>
+  </g>
+  <path d="M32 22C30.5 28 26 32.5 26 38C26 42.5 28.8 46 32 46C35.2 46 38 42.5 38 38C38 32.5 33.5 28 32 22Z" fill="#D7FF00"/>
+</svg>

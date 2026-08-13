@@ -1,50 +1,108 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
 
-const NAV_LINKS = [
-  { label: "智小申", href: "/proposalpilot" },
-  { label: "科小文", href: "/scholarpilot" },
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { List } from "@phosphor-icons/react";
+import { FocusEvent, useEffect, useRef, useState } from "react";
 
 export default function Nav() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const productMatrixHref = isHome ? "#products" : "/#products";
+  const isProductPage = pathname === "/proposalpilot" || pathname === "/scholarpilot";
+  const primaryCtaHref = isProductPage ? "#early-access" : productMatrixHref;
+  const primaryCtaLabel = isProductPage ? "申请内测" : "选择产品";
+  const previousPathname = useRef(pathname);
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [suppressProductHover, setSuppressProductHover] = useState(false);
+
+  useEffect(() => {
+    if (previousPathname.current === pathname) return;
+
+    previousPathname.current = pathname;
+    setProductsOpen(false);
+    setSuppressProductHover(true);
+    mobileMenuRef.current?.removeAttribute("open");
+  }, [pathname]);
+
+  const closeProductsForNavigation = () => {
+    setProductsOpen(false);
+    setSuppressProductHover(true);
+  };
+
+  const handleProductsBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      setProductsOpen(false);
+    }
+  };
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur-md">
-      <div className="mx-auto max-w-6xl px-6 flex h-16 items-center justify-between">
-        {/* Wordmark */}
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label="溥源科技 首页">
-          <Image
-            src="/logo-mark.svg"
-            alt="溥源科技 logo"
-            width={28}
-            height={28}
-            className="transition-opacity group-hover:opacity-80"
-            priority
-          />
-          <span className="font-sans font-semibold text-base tracking-wide text-text group-hover:text-accent transition-colors">
-            PUYUAN
-          </span>
-        </Link>
+    <header className="site-nav fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
+      <div className="site-nav__shell mx-auto max-w-[1440px] rounded-[28px] border border-border/75 bg-surface/40 shadow-[0_14px_42px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.055)] backdrop-blur-xl backdrop-brightness-110 backdrop-saturate-150">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
+          <Link href="/" className="group flex items-center rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-accent" aria-label="溥源智能首页">
+            <img src="/brand-logo-symbol.png?v=2" alt="" className="h-9 w-9 bg-transparent object-contain" />
+            <span className="font-mono text-sm font-semibold tracking-[0.12em] text-text transition-colors group-hover:text-accent">PRYOS AI</span>
+          </Link>
 
-        {/* Product links */}
-        <nav className="hidden sm:flex items-center gap-6">
-          {NAV_LINKS.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className="text-sm text-muted hover:text-text transition-colors"
+          <nav className="hidden items-center gap-1 sm:flex" aria-label="主导航">
+            <Link href="/" className="nav-link">首页</Link>
+            <div
+              className="nav-products"
+              data-open={productsOpen}
+              onPointerEnter={() => {
+                if (!suppressProductHover) setProductsOpen(true);
+              }}
+              onPointerLeave={() => {
+                setProductsOpen(false);
+                setSuppressProductHover(false);
+              }}
+              onFocusCapture={() => setProductsOpen(true)}
+              onBlur={handleProductsBlur}
             >
-              {label}
-            </Link>
-          ))}
-        </nav>
+              <button
+                type="button"
+                className="nav-link nav-products__trigger"
+                aria-haspopup="true"
+                aria-expanded={productsOpen}
+                onClick={() => {
+                  setSuppressProductHover(false);
+                  setProductsOpen((open) => !open);
+                }}
+              >
+                产品
+              </button>
+              <div className="nav-products__menu" aria-hidden={!productsOpen}>
+                <Link href="/proposalpilot" className="nav-products__item" onClick={closeProductsForNavigation}>
+                  <span><strong>智小申</strong><small>ProposalPilot Agent</small><em>企业项目申报 · 研发共创</em></span>
+                </Link>
+                <Link href="/scholarpilot" className="nav-products__item" onClick={closeProductsForNavigation}>
+                  <span><strong>科小文</strong><small>ScholarPilot Agent</small><em>AI 科研工作台 · 内测中</em></span>
+                </Link>
+              </div>
+            </div>
+            <Link href="/about" className="nav-link">关于我们</Link>
+            <Link href="/faq" className="nav-link">常见问题</Link>
+          </nav>
 
-        {/* CTA */}
-        <Link
-          href="https://app.puyuan.tech"
-          className="hidden sm:inline-flex items-center rounded-md bg-accent px-4 py-1.5 text-sm font-semibold text-bg hover:bg-accent-hover glow-hover transition-all"
-        >
-          免费试用
-        </Link>
+          <details ref={mobileMenuRef} className="nav-mobile sm:hidden">
+            <summary aria-label="打开主导航"><List size={22} weight="regular" aria-hidden="true" /></summary>
+            <nav className="nav-mobile__menu" aria-label="移动端主导航">
+              <Link href="/">首页</Link>
+              <span>产品</span>
+              <Link href="/proposalpilot" className="nav-mobile__product">智小申 <small>ProposalPilot Agent</small></Link>
+              <Link href="/scholarpilot" className="nav-mobile__product">科小文 <small>ScholarPilot Agent</small></Link>
+              <Link href="/about">关于我们</Link>
+              <Link href="/faq">常见问题</Link>
+              <Link href={primaryCtaHref} className="nav-mobile__cta">{primaryCtaLabel}</Link>
+            </nav>
+          </details>
+
+          <Link href={primaryCtaHref} className="hidden min-h-10 items-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-bg outline-none transition-[background-color,box-shadow,transform] hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-glow focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface active:translate-y-0 sm:inline-flex">
+            {primaryCtaLabel}
+          </Link>
+        </div>
       </div>
     </header>
   );
