@@ -2152,3 +2152,11 @@
 - Navigation: removed the graphite tile behind the approved fluorescent mark and switched the header brand lockup to a transparent-background asset.
 - Scope: only the top navigation uses the transparent mark; footer, favicon, About page, and homepage source node remain unchanged.
 - Cache fix: moved the transparent asset to a new versioned URL so the development browser cannot reuse the previous black-tile image.
+## 2026-08-13 - High-contrast navigation logo
+
+- Legibility: introduced a graphite positive version of the approved mark for the white navigation surface, replacing the low-contrast fluorescent-only default.
+- Interaction: the fluorescent mark fades in on brand hover and keyboard focus; dark-page placements keep their existing reverse treatment.
+## 2026-08-13 - Adaptive navigation logo contrast
+
+- Navigation: connected the dual logo treatment to the existing homepage, ProposalPilot, and ScholarPilot dark navigation states.
+- Contrast: dark navigation surfaces now show the fluorescent mark by default; light navigation surfaces show graphite, with the alternate color retained as hover and focus feedback.
